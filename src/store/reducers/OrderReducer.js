@@ -22,8 +22,7 @@ const orderSlice = createSlice({
         },
         deletedOrderData(state,action){
              state.order =  state.order.filter((arrow) => arrow.orderId !== action.payload);
-            debugger
-            // state.success = true
+            state.success = true
         },
 
 
