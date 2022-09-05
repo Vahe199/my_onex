@@ -1,0 +1,145 @@
+@import "varibles";
+
+.navbar{
+  width: 100%;
+  background: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px #eee;
+
+  .topBar{
+   @include navStyle(50px);
+    background-color: $grayColor;
+    .btnGroup{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 8%;
+      .btnLog{
+        margin-right: 5px;
+        line-height: 21px;
+        @include buttonStyle($greenColor,14px);
+      }
+      .btnReg{
+        line-height: 21px;
+        @include buttonStyle($orangeColor,14px);
+      }
+    }
+    .links{
+      margin-left: 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a{
+        @media only screen and (max-width: $lg) {
+          display: none;
+        }
+        @include aStyle(12px,0 2px);
+      }
+    }
+  }
+  .bottomBar{
+    @include navStyle(78px);
+    img{
+      height: 40px;
+      margin-left: 8%;
+    }
+    .links{
+     display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 8%;
+      a{
+        @media only screen and (max-width: $lg) {
+          display: none;
+        }
+        height: 100%;
+        display: flex;
+         align-items: center;
+        @include aStyle(14px,0 5px);
+        &:hover {
+         border-top: 3px solid $greenColor;
+        }
+      }
+      h1{
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        @include aStyle(17px,0 5px);
+        &:hover {
+          border-top: 3px solid $greenColor;
+          .popup{
+            display: flex;
+          }
+        }
+      }
+      p{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        @include aStyle(14px,0 10px);
+        &:hover {
+          border-top: 3px solid $greenColor;
+        }
+      }
+      img{
+        height: 25px;
+        margin-left: 10px;
+      }
+      .img{
+        height: 18px;
+        width: 30px;
+        margin: 0;
+      }
+      .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 5px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+    }
+  }
+}
+.popup{
+  display: none;
+  position: absolute;
+  top: 77px;
+  z-index: 99;
+  background-color: $whiteColor;
+  border-top: 3px solid $greenColor;
+  flex-direction: column;
+  box-shadow: 0 5px 5px 0 rgb(90 90 90 / 8%);
+  .pop{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $greenColor;
+  }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 8px 15px;
+    @include aStyle(14px,0 0);
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+  img{
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+    margin-left: 0 !important;
+  }
+}
+
+

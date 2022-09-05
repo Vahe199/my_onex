@@ -1,0 +1,28 @@
+@import "varibles";
+
+.mainPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  @media only screen and (max-width: $lg) {
+   flex-direction: column;
+  }
+  h1{
+    color:$redColor ;
+  }
+
+  button {
+    @include buttonStyle($redColor, 35px);
+  }
+  .card{
+    @media only screen and (min-width: $sm)  and (max-width: $lg) {
+      width: $sm;
+    }
+    @media only screen and (max-width: $sm) {
+      width: 300px;
+    }
+    @include cardStyle();
+  }
+}
+

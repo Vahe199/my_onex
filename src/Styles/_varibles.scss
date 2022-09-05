@@ -1,0 +1,79 @@
+//window size
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only
+
+
+
+//COLORS
+$blackColor:rgb(26,26,26);
+$whiteColor:rgb(255, 255, 255);
+$redColor: rgb(231, 57, 57);
+$grayColor:rgb(244,244,244);
+$greenColor:rgb(93 186 47);
+$orangeColor:rgb(241 196 15);
+$bluColor:rgb(38, 50, 211);
+
+//FONTS
+
+$titleFont:Kinnari,Hubballi, sans-serif;
+$bodyFont:'Times New Roman', Times,serif;
+
+//
+@mixin buttonStyle($bgColor, $fontSize,$padding:6px 13px,$fontWeight:normal,$radius:10px){
+   background-color: $bgColor;
+  border: none;
+  padding: $padding;
+  font-weight: $fontWeight;
+  border-radius: $radius;
+  color: $whiteColor;
+  font-size: $fontSize;
+  text-transform: uppercase;
+}
+@mixin navStyle($size){
+  width: 100%;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin aStyle($fontSize,$margin){
+  color: $blackColor;
+  font-size: $fontSize;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: $margin;
+  &:hover {
+    color: $greenColor;
+  }
+}
+
+@mixin cardStyle(){
+  width: 360px;
+  height: 290px;
+  box-shadow: 0 1px 4px 0 rgb(46 61 73 / 10%);
+  border-radius: 0 0 20px 20px ;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width: 100%;
+    height: 190px;
+  }
+  h3{
+    font-size: 18px ;
+    line-height: 1.2 ;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: $greenColor;
+    }
+  }
+}
+
+
